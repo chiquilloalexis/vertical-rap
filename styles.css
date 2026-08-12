@@ -155,7 +155,7 @@ nav.mainnav a {
 }
 nav.mainnav a:hover { background: var(--fog); color: var(--rope-dark); }
 
-.header-actions { display: flex; align-items: ; gap: 10px; }
+.header-actions { display: flex; align-items: center ; gap: 10px; }
 
 .cart-btn {
   display: flex;
