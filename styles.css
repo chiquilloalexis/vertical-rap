@@ -26,7 +26,7 @@
 
   --radius: 3px;
 }
-.logo-img { height: 45px; width: auto; display: block; } 
+.logo-img { height: 65px; width: auto; display: block; } 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
@@ -155,7 +155,7 @@ nav.mainnav a {
 }
 nav.mainnav a:hover { background: var(--fog); color: var(--rope-dark); }
 
-.header-actions { display: flex; align-items: center; gap: 14px; }
+.header-actions { display: flex; align-items: ; gap: 10px; }
 
 .cart-btn {
   display: flex;
