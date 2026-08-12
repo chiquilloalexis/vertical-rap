@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VerticalRope — Equipos para Trabajo en Alturas y Protección Personal</title>
+<meta name="description" content="VerticalRape: venta de equipos certificados para trabajo en alturas, arborismo, rescate y protección personal en Valledupar, Colombia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-item">📍 Cra 4h #21-30, Barrio Centro, <strong>Valledupar</strong></div>
+    <div class="topbar-item">
+      <a href="tel:3027725152">📞 <strong>302 772 5152</strong></a>
+      <span style="opacity:.4">|</span>
+      <a href="https://wa.me/573027725152" target="_blank" rel="noopener">WhatsApp directo</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site">
+  <div class="header-row wrap">
+    <a href="#top" class="logo">
+      <img src="imagenes/1.jpg" alt="Vertical Rope" class="logo-img">
+      <span>VERTICALROPE<span class="sub">SEGURIDAD EN ALTURAS</span></span>
+    </a>
+
+    <nav class="mainnav">
+      <a href="#top">Inicio</a>
+      <a href="#lineas">Líneas de Producto</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="cart-btn" id="openCart" aria-label="Abrir carrito">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span>Carrito</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="burger" id="openMobileNav" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mn-close" id="closeMobileNav">✕ Cerrar</button>
+  <a href="#top">Inicio</a>
+  <a href="#lineas">Líneas de Producto</a>
+  <a href="#catalogo">Catálogo</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#contacto">Contacto</a>
+</div>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-grid wrap">
+      <div class="hero-copy">
+        <div class="eyebrow">Equipos certificados · EN / ANSI</div>
+        <h1>Tu seguridad<br>no se <em>improvisa</em>,<br>se ancla.</h1>
+        <p class="lead">En Vertical Rap comercializamos equipos certificados para trabajo en alturas, arborismo, rescate y protección personal. Cada producto que vendemos es el mismo que confiaríamos a nuestro propio equipo.</p>
+        <div class="hero-actions">
+          <a href="#catalogo" class="btn btn-primary">Ver catálogo completo</a>
+          <a href="https://wa.me/573027725152" target="_blank" rel="noopener" class="btn btn-outline">Hablar con un asesor</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="num">39+</span><span class="lbl">Referencias activas</span></div>
+        <div class="hero-stat"><span class="num">5</span><span class="lbl">Líneas de producto</span></div>
+        <div class="hero-stat"><span class="num">100%</span><span class="lbl">Equipos certificados</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LÍNEAS DE PRODUCTO ============ -->
+  <section class="cat-section wrap" id="lineas">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Catálogo por línea</div>
+        <h2>Líneas de Producto</h2>
+        <p>Cinco frentes de trabajo, un mismo estándar de protección. Filtra el catálogo por la línea que necesitas.</p>
+      </div>
+    </div>
+    <div class="cat-grid" id="linesGrid"></div>
+  </section>
+
+  <!-- ============ CATÁLOGO ============ -->
+  <section class="wrap" id="catalogo" style="padding-top:70px;">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Inventario disponible</div>
+        <h2>Nuestros Productos</h2>
+        <p>Arnés, conectores, líneas de vida, kits de rescate y protección personal. Agrega al carrito para armar tu cotización.</p>
+      </div>
+    </div>
+
+    <div class="catalog-toolbar">
+      <div class="filter-chips" id="filterChips"></div>
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="searchInput" placeholder="Buscar producto, referencia...">
+      </div>
+    </div>
+
+    <p class="results-count" id="resultsCount"></p>
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+
+  <!-- ============ WHY US ============ -->
+  <section class="why">
+    <div class="wrap">
+      <div class="eyebrow">Por qué elegirnos</div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(26px,3vw,36px);text-transform:uppercase;margin:0;">Más que un proveedor, un aliado en seguridad</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <span class="idx">Equipo certificado</span>
+          <h3>Trazabilidad total</h3>
+          <p>Cada producto cuenta con ficha técnica, certificación de norma y trazabilidad de lote, para que sepas exactamente qué estás llevando a terreno.</p>
+        </div>
+        <div class="why-item">
+          <span class="idx">Asesoría técnica</span>
+          <h3>Acompañamiento real</h3>
+          <p>No vendemos catálogo, resolvemos necesidades. Te ayudamos a elegir el sistema correcto según tu labor, altura y entorno de trabajo.</p>
+        </div>
+        <div class="why-item">
+          <span class="idx">Respuesta ágil</span>
+          <h3>Atención directa por WhatsApp</h3>
+          <p>Cotizaciones y disponibilidad de inventario respondidas por un asesor real, sin filas de espera ni bots genéricos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="services wrap" id="servicios">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Servicios técnicos</div>
+        <h2>Más allá de la venta</h2>
+        <p>Acompañamos el ciclo completo de tus equipos: desde la compra hasta la inspección periódica.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3>Inspección de Equipos</h3>
+        <p>Revisión técnica de arneses, retráctiles y sistemas de anclaje, con informe detallado según normativa vigente.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>Reparación de Trípodes y Retráctiles</h3>
+        <p>Mantenimiento preventivo y correctivo especializado para sistemas de rescate usados en trabajo en alturas.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 7v6c0 5 4 9 9 9s9-4 9-9V7l-9-5Z"/></svg></div>
+        <h3>Instalación de Puntos de Anclaje</h3>
+        <p>Diseño, instalación y certificación de puntos de anclaje y líneas de vida fijas o temporales.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <div>
+        <h2>¿Necesitas cotizar equipos para tu equipo de trabajo?</h2>
+        <p>Arma tu pedido en el carrito y lo enviamos directo a un asesor por WhatsApp.</p>
+      </div>
+      <a href="https://wa.me/573027725152" target="_blank" rel="noopener" class="btn btn-dark">Cotizar por WhatsApp</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site" id="contacto">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">VERTICAL RAP</div>
+        <p>Equipos certificados para trabajo en alturas, arborismo, rescate y protección personal. Tu seguridad, nuestro compromiso.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/573027725152" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Líneas de Producto</h4>
+        <ul id="footerLines"></ul>
+      </div>
+
+      <div>
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Inspección de equipos</a></li>
+          <li><a href="#servicios">Reparación de trípodes y retráctiles</a></li>
+          <li><a href="#servicios">Instalación de puntos de anclaje</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contacto</h4>
+        <ul class="footer-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 7v6c0 5 4 9 9 9s9-4 9-9V7l-9-5Z"/></svg> Carrera 4h #21-30, Valledupar, Cesar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg> 302 772 5152</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Lun - Vie: 8:00am–1:00pm / 2:00pm–5:00pm</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Vertical Rap. Todos los derechos reservados.</span>
+      <span>Valledupar, Colombia</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>Tu Carrito</h3>
+    <button class="cart-close" id="closeCart" aria-label="Cerrar carrito">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot" id="cartFoot">
+    <p class="note">Sin precios en línea — recibe la cotización formal directo con un asesor.</p>
+    <a href="#" id="whatsappCheckout" class="btn btn-primary" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>
+  </div>
+</aside>
+
+<!-- ============ QUICK VIEW MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast"></div>
+
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
